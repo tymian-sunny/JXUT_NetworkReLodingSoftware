@@ -1,0 +1,14 @@
+{
+    "username": "202299010093",
+    "password": "02200059",
+  "implicitly_wait_time": 10,
+  "implicitly_wait_time_debug": 1,
+  "take_sample_time": 1,
+  "loadingTop": 1500,
+  "listening_keyboard": "control+1",
+  "closeWindow": 1,
+  "leftSize": 1.15,
+  "topSize": 1.25,
+  "rightSize": 1.25,
+  "bottomSize": 1.25
+}

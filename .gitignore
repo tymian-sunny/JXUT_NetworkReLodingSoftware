@@ -1,0 +1,10 @@
+# created by virtualenv automatically
+code.png/
+screenshot.png/
+control.py/
+libs/
+Scripts/
+Lib/
+dist/
+.idea/
+build/
