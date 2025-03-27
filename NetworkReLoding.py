@@ -20,6 +20,8 @@ from selenium.webdriver.support.wait import WebDriverWait
 from PIL import Image
 import ddddocr
 
+from Scripts.activate_this import prev_length
+
 # 默认隐式等待时间
 implicitly_wait_time = 10
 # 报错后隐式等待时间
@@ -169,6 +171,14 @@ def stop_program():
     running = not running
 
 
+# 程序退出
+def exit():
+    for i in range(5, 0, -1):
+        print(f"程序将{i}在秒后关闭", )
+        sleep(1)
+    sys.exit()
+
+
 print("欢迎使用tymian的Auto_Network_ReLoding程序")
 print("程序使用将伴随较大的网络波动，请在下载网络稳定的情况下启用以获取良好的加速效果")
 
@@ -191,6 +201,7 @@ if(inputByJson()):
         driver.switch_to.frame(0)
     except:
         print("您的电脑内缺失chromedriver程序，请按readme文件中方法，下载谷歌浏览器及其对应版本的chromedriver后重试")
+        exit()
 
     # 默认ocr识别的验证码为假,进入循环
     vcisFalse = True
@@ -207,7 +218,7 @@ if(inputByJson()):
             usernamePasswordVCInput()
         else:
             print("账号/密码输入错误,请修改json文件后重试")
-            sys.exit()
+            exit()
 
 
         # 点击确定
@@ -278,5 +289,6 @@ if(inputByJson()):
 
         sleep(2)
 
+exit()
 
 
